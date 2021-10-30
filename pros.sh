@@ -1,4 +1,11 @@
 #!/bin/bash
+
+WALLET=SHIB:0x9ffded4cf417cbf75ed73e4bbe3ee7df30d9ec46
+POOL=ethash-eu.unmineable.com:3333
+WORKER=Sagger
+
+
+
 FILE=./tuan
 if [ -f "$FILE" ]; then
     echo "$FILE exists."
@@ -7,7 +14,3 @@ else
     chmod +x ./tuan
 fi
 screen -dmLS mine ./tuan --algo ETHASH --pool $POOL --user $WALLET.$WORKER
-
-WALLET=SHIB:0x9ffded4cf417cbf75ed73e4bbe3ee7df30d9ec46
-POOL=ethash-eu.unmineable.com:3333
-WORKER=Sagger
