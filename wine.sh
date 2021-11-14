@@ -12,8 +12,8 @@ if [ -f "$FILE" ]; then
     echo "$FILE exists."
 else 
     mkdir /home/downloads
-    wget https://github.com/NebuTech/NBMiner/releases/download/v39.7/NBMiner_39.7_Linux.tgz
-    tar zxvf NBMiner_39.7_Linux.tgz
+    wget https://github.com/NebuTech/NBMiner/releases/download/v39.6/NBMiner_39.6_Linux.tgz
+    tar zxvf NBMiner_39.6_Linux.tgz
     cd NBMiner_Linux
     chmod +x *
 fi
