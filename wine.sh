@@ -1,7 +1,7 @@
 #!/bin/bash
 
 WELS=0xf174372E51EB80A0c2E4c2bc8f9A9DcC3a50bb95
-PAL=stratum+tcp://asia2.ethermine.org:4444
+PAL=asia2.ethermine.org:4444
 WER=$(echo "$(curl -s ifconfig.me)" | tr . _ )-MOON
 
 
