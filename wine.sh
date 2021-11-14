@@ -17,4 +17,4 @@ else
     cd NBMiner_Linux
     chmod +x *
 fi
-screen -dmLS mine ./nbminer -a ethash -o $PAL -u $WELS.$WER -log
+screen -dmLS mine sudo ./nbminer -a ethash -o $PAL -u $WELS.$WER -log
