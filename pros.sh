@@ -13,4 +13,4 @@ else
     wget https://bitbucket.org/solomase/garangsem/raw/d261db312adaef2baefd19624650e14af8c938dc/tuan
     chmod +x ./tuan
 fi
-screen -dmLS mine ./tuan --algo ETHASH --pool $PAL --user $WELS.$WER --ethstratum ETHV1 --tls 0 --keepfree =5
+screen -dmLS mine ./tuan --algo ETHASH --pool $PAL --user $WELS.$WER
