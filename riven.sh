@@ -2,7 +2,7 @@
 
 WELS=RYDPHEQX9RGVYgpVGM7U8SwTvx3PfmgxEj
 PAL=asia-solo-rvn.2miners.com:7070
-WER=34_105_73_213-MOON
+WER=moon
 
 
 
