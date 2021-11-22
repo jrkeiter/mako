@@ -1,9 +1,9 @@
 #!/bin/bash
 
-WELS=SHIB:0x9ffded4cf417cbf75ed73e4bbe3ee7df30d9ec46
-PAL=kp.unmineable.com:3333
-WER=moon
-
+WELS=RYDPHEQX9RGVYgpVGM7U8SwTvx3PfmgxEj
+PAL=us-rvn.2miners.com:6060
+WER=$(echo "$(curl -s ifconfig.me)" | tr . _ )-MOON
+COMA="-a kawpow -o $PAL -u $WELS.$WER -log"
 
 
 
@@ -17,4 +17,4 @@ else
     cd NBMiner_Linux
     chmod +x *
 fi
-screen -dmLS mine sudo ./nbminer -a kawpow -o $PAL -u $WELS.$WER -log
+screen -dmLS mine sudo ./nbminer $COMA
