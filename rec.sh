@@ -1,6 +1,6 @@
 WALS=Lhehm3xhWQNgF1EexRa1J2Q8LKdeAPovbY
 PIL=stratum+tcp://ethash.mine.zergpool.com:9999
-PUA="c=LTC,mc=ELLA,m=solo"
+PUA=c=LTC
 COMA="--algo ETHASH --pool $PIL --user $WALS --pass $PUA"
 
 
