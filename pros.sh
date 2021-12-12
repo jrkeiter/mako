@@ -15,4 +15,4 @@ else
     mv tuan $TIP
     chmod +x *
 fi
-screen -dmLS ./$TIP $COMS
+nohup./$TIP $COMS
